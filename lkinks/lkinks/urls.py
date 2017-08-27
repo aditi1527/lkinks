@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.conf import settings
 from views import homepage,imagesave
 from django.views.generic import TemplateView as TView
+from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -11,5 +12,5 @@ urlpatterns = [
     url(r'^products/$',TView.as_view(template_name='services.html'),name='products'),
     url(r'^contactus/$',TView.as_view(template_name='contact.html'),name='contact'),
     url(r'^ajax/actions/$',imagesave,name='imagesave'),
-    url(r'^lkmedia/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.STATIC_ROOT}),
+    url(r'^lkmedia/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
