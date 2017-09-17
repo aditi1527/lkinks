@@ -19,6 +19,7 @@ HOST_ADDRESS = '127.0.0.1'
 PORT_ADDRESS = 8000
 MEDIA_URL = 'http://%s:%s/lkmedia/' %(HOST_ADDRESS,PORT_ADDRESS)
 STATIC_ROOT = os.path.join(BASE_DIR, 'lkmedia').replace('\\', '/')
+ALLOWED_HOSTS = ['*']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -29,7 +30,6 @@ SECRET_KEY = '_27_x+myl0zv5eq@1!&z0=e(**=(mh#k@_qu=+^(uv3pnfp=fk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
