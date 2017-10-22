@@ -40,10 +40,10 @@
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a class="active" href="/">Home</a></li>
+					<li><a  href="/">Home</a></li>
 					<li><a href="{% url 'about' %}">About</a></li>
 					<li><a href="{% url 'products' %}">Products & Services</a></li>
-					<li><a href="{% url 'contact' %}">Contact Us</a></li>
+					<li><a class="active" href="{% url 'contact' %}">Contact Us</a></li>
 				  </ul>
 				</div><!-- /.navbar-collapse -->
 			  </div>
@@ -81,7 +81,7 @@
 									<input type="email" class="text" id='email' name="email" placeholder="e-mail" required="" />
 									<input type="tel" class="text" id='phone' name="phone" placeholder="phone number" required="" />
 									 <textarea placeholder="Your Message" id='message' name="message" required="" ></textarea>
-                                    <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" id='upload' />
+                                    <!-- <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" id='upload' /> -->
 									<input type="submit" value="Submit">
 								</form>
 							</div>
