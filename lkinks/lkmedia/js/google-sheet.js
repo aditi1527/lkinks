@@ -30,7 +30,8 @@ $("#foo").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url : "https://script.google.com/macros/s/AKfycbwbqmkZ1I71anUowrmhbNOc20bFH2nhruzMZEbbrBX_SQjSqGvb/exec",
+        // url : "https://script.google.com/macros/s/AKfycbwbqmkZ1I71anUowrmhbNOc20bFH2nhruzMZEbbrBX_SQjSqGvb/exec",
+        url : "https://script.google.com/macros/s/AKfycbx4pJC6FObXXzdQXMcOrPQsJ50ZI99rdrk-m1RD4nMFrq3AImy8/exec",
         type: "post",
         data: serializedData
     });
