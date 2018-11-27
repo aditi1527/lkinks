@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+
+	<body>
+	
+		{% include 'nav.html' %}	
+		
+		<!-- inner banner -->
+		<div class="w3layouts-inner-banner">
+			<a href="/" id="logo"><h1><img src="../lkmedia/images/logo.xcf"></img>L.K. Inks</h1></a>
+		</div>
+		<!-- //inner banner -->	
+		
+		<!-- main-content -->
+		<div class="wthree-main-content w3layouts-contact">
+			<!-- contact -->
+		<div class="agileits contact">
+			<div class="container">
+				<h2 class="agile-inner-title">Contact Us</h2>						
+				<div class="agileits-w3layouts-map">
+					<h4>Location</h4>
+					<iframe src="https://www.google.com/maps/embed/v1/place?q=28.627632,77.122984&amp;key=AIzaSyCIRTONvA9ZszEvN77Np-dNVy2i1XHvTzs" allowfullscreen></iframe>
+				</div>				
+			</div>
+			<div class="w3-agileits-contact-section" id="contact-section">
+					<div class="agileinfo-contact-section-head">
+						<div class="container">
+							<h3>Get in Touch</h3>
+						</div>
+					</div>
+					<div class="wthree-contact-section-grids">
+						<div class="container">
+							<div class="col-md-8 w3ls-contact-section-left-grid">
+								<form method="post" id="foo" enctype="multipart/form-data">
+									<input type="text" class="text" id='name' name="name" placeholder="your name" required="" />
+									<input type="email" class="text" id='email' name="email" placeholder="e-mail" required="" />
+									<input type="tel" class="text" id='phone' name="phone" placeholder="phone number" required="" />
+									 <textarea placeholder="Your Message" id='message' name="message" required="" ></textarea>
+                                    <!-- <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" id='upload' /> -->
+									<input type="submit" value="Submit">
+								</form>
+							</div>
+							<div class="col-md-4 w3ls-contact-section-right-grid">
+								<h4>Contact Details</h4>
+								<p>Lahiri Kundu & Co.</p>
+								<ul class="w3l-contact-section-list">
+									<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>WH-25 MAYAPURI INDUSTRIAL AREA PHASE - 1 NEW DELHI -110064</li>
+								</ul>
+								<ul class="w3l-contact-section-list">
+									<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></li>
+									<li>9810186313</li>
+								</ul>
+								<ul class="w3l-contact-section-list">
+									<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></li>
+									<li><a href="mailto:lkcinks@gmail.com">lkcinks@gmail.com</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+		</div>
+		</div>
+		
+	{% include 'footer.html' %}
+	
+<script>
+</script>	
+<script type="text/javascript" src="../lkmedia/js/jquery-2.1.4.min.js"></script>
+	<script src='../lkmedia/js/google-sheet.js'></script>
+	<script src="../lkmedia/js/bootstrap.min.js"></script>
+	
+	<script src='../lkmedia/js/jquery.js'></script><!-- Required-js -->
+	<script src="../lkmedia/js/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../lkmedia/js/jquery.maximage.js" type="text/javascript" charset="utf-8"></script>		
+	<script type="text/javascript">
+		$(function(){
+			$('#maximage').maximage({
+				cycleOptions: {
+					fx: 'fade',
+					speed: 1000, // Has to match the speed for CSS transitions in jQuery.maximage.css (lines 30 - 33)
+					timeout: 4000,
+					prev: '#arrow_left',
+					next: '#arrow_right',
+					pause: 1,
+					before: function(last,current){
+						if(!$.browser.msie){
+							// Start HTML5 video when you arrive
+							if($(current).find('video').length > 0) $(current).find('video')[0].play();
+						}
+					},
+					after: function(last,current){
+						if(!$.browser.msie){
+							// Pauses HTML5 video when you leave it
+							if($(last).find('video').length > 0) $(last).find('video')[0].pause();
+						}
+					}
+				},
+				onFirstImageLoaded: function(){
+					jQuery('#cycle-loader').hide();
+					jQuery('#maximage').fadeIn('fast');
+				}
+			});
+	
+			// Helper function to Fill and Center the HTML5 Video
+			jQuery('video,object').maximage('maxcover');
+	
+			// To show it is dynamic html text
+			jQuery('.in-slide-content').delay(1200).fadeIn();
+		});
+	</script>	
+	<!-- //banner slider-js -->
+	
+	<!-- login popop responsive tabs -->
+		<script src="../lkmedia/js/easyResponsiveTabs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#horizontalTab').easyResponsiveTabs({
+					type: 'default', //Types: default, vertical, accordion           
+					width: 'auto', //auto or any width like 600px
+					fit: true   // 100% fit in a container
+				});
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+									
+				});
+		</script>
+		
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="../lkmedia/js/move-top.js"></script>
+		<script type="text/javascript" src="../lkmedia/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+	</body>
+</html>

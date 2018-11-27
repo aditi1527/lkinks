@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+	<body>
+
+		{% include 'nav.html' %}
+		
+		<!-- inner banner -->
+		<div class="w3layouts-inner-banner">
+			<a href="/" id="logo"><h1>L.K. Inks</h1></a>
+		</div>
+		<!-- //inner banner -->		
+		
+		<!-- main-content -->
+		<div class="wthree-main-content w3layouts-contact">
+			<!-- about -->
+			<div class="agileits contact">
+				<div class="container">
+					<h2 class="agile-inner-title">About Us</h2>						
+					<!-- about-top -->
+					<div class="about-top">
+							<div class="agile-about-top-grids">
+								<!-- <div class="col-md-5 agile-about-top-left">
+									<div class="agile-about-top-left-info">
+									</div>
+								</div> -->
+								<div class="agile-about-top-right">
+									<h4>Lahiri Kundu & Co. Has been a reputed name in printing ink manufacturing industry for more than 45 years.</h4> 
+									<p>The sole goal of the company is to satisfy customers by means of achieving continual improvement in quality, productivity, reliability and service by implementing quality management syatem at the lowest possible operative costs. We are pioneer in manufacturing a wide range of offset, web offset, screen, letter press and metal decorating inks. Our patrons can avail these inks in different chemical composition and multiple colors option. Quality, prompt services, complete customer satisfaction, dedication and reasonable price are hallmark of the company.
+									<span><b>	
+									Fact Sheet:
+									</b><span><p>
+									Year of Establishment:	1973
+									</p><p>
+									Nature of Business:	Manufacturer
+									</p><p>
+									Delivery Locations : 	All Over India
+									</p>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+					</div>
+					<!-- //about-top -->	
+				</div>
+			</div>
+			<!-- // about -->
+			<!---->
+			<div class="get-started">
+				 <div class="container">
+					 <h4>We Ready to Help You</h4>
+					 <a href="{% url 'contact' %}">Get In Touch</a>
+				 </div>
+				 <div class="agileits-layer"></div>
+			</div>
+		</div>
+	
+	{% include 'footer.html' %}
+		
+		<script type="text/javascript" src="../lkmedia/js/jquery-2.1.4.min.js"></script>
+		<script src="../lkmedia/js/bootstrap.min.js"></script>
+		<script src="../lkmedia/js/responsiveslides.min.js"></script>
+		<script>
+			$(function () {
+				$("#slider3").responsiveSlides({
+					auto: true,
+					pager:true,
+					nav:false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+									
+				});
+		</script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+	</body>
+</html>
